@@ -18,9 +18,9 @@ require 'rails_helper'
 
       expect(current_path).to eq('/')
 
-      expect(page).to have_content "Log out"
+      expect(page).to have_content "Sign out"
 
-      click_on "Log out"
+      click_on "Sign out"
 
       expect(current_path).to eq('/login')
       end

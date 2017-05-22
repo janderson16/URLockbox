@@ -392,7 +392,7 @@
         null,
         null
       ],
-      "/Users/jamesanderson/Turing/mod_4/m4-final/spec/features/users/user_can_login_spec.rb": [
+      "/Users/jamesanderson/Turing/mod_4/m4-final/spec/features/users/user_can_login_logout_spec.rb": [
         1,
         null,
         1,
@@ -560,6 +560,6 @@
         null
       ]
     },
-    "timestamp": 1495472055
+    "timestamp": 1495472752
   }
 }
