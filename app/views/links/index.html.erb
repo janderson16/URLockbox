@@ -31,9 +31,9 @@
     </thead>
     <tbody>
       <% @links.each do |link| %>
-        <tr>
+
           <%= render partial: 'show-link', locals: {link: link} %>
-        </tr>
+
         <% end %>
     </tbody>
   </table>
