@@ -1,4 +1,5 @@
 class LinksController < ApplicationController
+  before_action :require_permission, only: [:edit]
 
   def index
     unless current_user
