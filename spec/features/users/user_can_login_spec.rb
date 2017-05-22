@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-  describe "User can log in to their account" do
+  describe "User can log in and log out of their account" do
     context "with valid credentials" do
-      scenario "they click on log in button" do
+      scenario "they click on log in/log out buttons" do
       user = User.create!(
                          email: "johndoe@gmail.com",
                          password: "password",
@@ -11,7 +11,6 @@ require 'rails_helper'
 
       visit login_path
 
-      save_and_open_page
       fill_in "session[email]", with: "johndoe@gmail.com"
       fill_in "session[password]", with: "password"
       click_on "Login"
@@ -20,6 +19,10 @@ require 'rails_helper'
       expect(current_path).to eq('/')
 
       expect(page).to have_content "Log out"
+
+      click_on "Log out"
+
+      expect(current_path).to eq('/login')
       end
     end
 
