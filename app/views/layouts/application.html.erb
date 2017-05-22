@@ -8,6 +8,22 @@
 </head>
 <body>
 <div class="container">
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <%- unless current_user == nil -%>
+          <li><%= link_to "Log out", logout_path, method: :delete %> </li>
+        <%- else -%>
+          <li><%= link_to "Log In", login_path, method: :get %> </li>
+          <!-- <li><%#= link_to "Register", new_user_path %></li> -->
+        <%- end -%>
+      </ul>
+    </nav>
+
+    <% flash.each do |type, message| %>
+      <div class="alert">
+        <%= sanitize(message) %>
+      </div>
+    <% end %>
   <%= yield %>
 </div>
 

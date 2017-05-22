@@ -16,7 +16,7 @@ gem 'awesome_print'
 gem 'sprockets-es6'
 gem 'bcrypt', '~> 3.1.7'
 gem "validate_url"
-
+gem 'simplecov', :require => false, :group => :test
 # gem 'unicorn'
 
 # gem 'capistrano-rails', group: :development
