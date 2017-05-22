@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe User do
-  it "user can be created as an admin" do
+  it "user can be created" do
     user = User.create(email: "dirk_diggler@boogie.com",
                        password: "boom",
                        password_confirmation: "boom"

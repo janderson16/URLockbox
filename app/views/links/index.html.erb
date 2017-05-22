@@ -1,1 +1,21 @@
 <h1>Hot Reads!</h1>
+<%#= render partial: "form" %>
+<%= form_for @user.links.new, remote: true, id: "create_new" do |f| %>
+
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.hidden_field :user_id%>
+
+  <%= f.submit %>
+<% end %>
+
+<hr>
+<% @links.each do |link| %>
+<div id="links">
+  <%= render partial: 'show-link', locals: {link: link} %>
+<% end %>
+</div>
