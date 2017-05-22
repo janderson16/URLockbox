@@ -27,9 +27,9 @@ require 'rails_helper'
         expect(current_path).to eq("/links")
 
         within(".link-#{link.id}") do
-          expect(page).to have_content "Title: Github"
-          expect(page).to have_content "URL: https://github.com"
-          expect(page).to have_content "Read? false"
+          expect(page).to have_content "Github"
+          expect(page).to have_content "https://github.com"
+          expect(page).to have_content "false"
         end
       end
     end

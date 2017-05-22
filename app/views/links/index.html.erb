@@ -1,4 +1,4 @@
-<h1>Hot Reads!</h1>
+<h1>URLockbox</h1>
 <%#= render partial: "form" %>
   <%= form_for @user.links.new, remote: true, id: "create_new" do |f| %>
 
@@ -14,11 +14,27 @@
   <% end %>
 
 <h3>Filters:</h3>
-  <label for="filter">Filter by Text</label><br>
-  <input class="filter-input" type="text" id="link_filter" /><br>
+  <label for="filter">Filter by Text</label>
+  <input type="text" id="link_filter" /><br>
 <hr>
-<% @links.each do |link| %>
+
 <div id="links">
-  <%= render partial: 'show-link', locals: {link: link} %>
-<% end %>
+  <table class="links" border="1" width="100%" ID="Table2" style="margin: 0px;">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>URL</th>
+            <th>Read?</th>
+            <th>Mark as Read</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+      <% @links.each do |link| %>
+        <tr>
+          <%= render partial: 'show-link', locals: {link: link} %>
+        </tr>
+        <% end %>
+    </tbody>
+  </table>
 </div>

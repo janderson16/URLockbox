@@ -21,15 +21,15 @@ require 'rails_helper'
         visit '/'
 
         within(".link-#{link_1.id}") do
-          expect(page).to have_content "Title: Google"
-          expect(page).to have_content "URL: https://www.google.com"
-          expect(page).to have_content "Read? false"
+          expect(page).to have_content "Google"
+          expect(page).to have_content "https://www.google.com"
+          expect(page).to have_content "false"
         end
 
         within(".link-#{link_2.id}") do
-          expect(page).to have_content "Title: Github"
-          expect(page).to have_content "URL: https://github.com"
-          expect(page).to have_content "Read? false"
+          expect(page).to have_content "Github"
+          expect(page).to have_content "https://github.com"
+          expect(page).to have_content "false"
         end
       end
     end

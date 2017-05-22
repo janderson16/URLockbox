@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-05-22T13:57:23-06:00">2017-05-22T13:57:23-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-05-22T15:12:05-06:00">2017-05-22T15:12:05-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">96.35%</span></span>
+    (<span class="covered_percent"><span class="green">96.1%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.4
+         1.39
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>29</b> files in total.
-    <b>329</b> relevant lines. 
-    <span class="green"><b>317</b> lines covered</span> and
-    <span class="red"><b>12</b> lines missed </span>
+    <b>333</b> relevant lines. 
+    <span class="green"><b>320</b> lines covered</span> and
+    <span class="red"><b>13</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,22 +52,22 @@
       
       <tr>
         <td class="strong"><a href="#52cebe9644626636b92fe018c8171819f5ebfa3d" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>10</td>
-        <td>5</td>
-        <td>5</td>
-        <td>0</td>
-        <td>5.2</td>
+        <td class="yellow strong">87.5 %</td>
+        <td>16</td>
+        <td>8</td>
+        <td>7</td>
+        <td>1</td>
+        <td>3.8</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#3dd3e237ced982fa7ecb03fbe30b827248e65de4" class="src_link" title="app/controllers/links_controller.rb">app/controllers/links_controller.rb</a></td>
-        <td class="green strong">92.86 %</td>
-        <td>47</td>
-        <td>28</td>
-        <td>26</td>
+        <td class="green strong">93.1 %</td>
+        <td>48</td>
+        <td>29</td>
+        <td>27</td>
         <td>2</td>
-        <td>2.1</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -359,11 +359,11 @@
         <div class="source_table" id="52cebe9644626636b92fe018c8171819f5ebfa3d">
   <div class="header">
     <h3>app/controllers/application_controller.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="yellow">87.5 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>8</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -397,7 +397,7 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">  helper_method :current_user</code>
+          <code class="ruby">  helper_method :current_user, :require_permission</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -427,6 +427,42 @@
         <li class="never" data-hits="" data-linenumber="10">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def require_permission</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="12">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    unless current_user == Link.find(params[:id]).user</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
+          
+          <code class="ruby">      render file: &quot;public/404&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
           <code class="ruby">end</code>
         </li>
       
@@ -437,10 +473,10 @@
         <div class="source_table" id="3dd3e237ced982fa7ecb03fbe30b827248e65de4">
   <div class="header">
     <h3>app/controllers/links_controller.rb</h3>
-    <h4><span class="green">92.86 %</span> covered</h4>
+    <h4><span class="green">93.1 %</span> covered</h4>
     <div>
-      <b>28</b> relevant lines. 
-      <span class="green"><b>26</b> lines covered</span> and
+      <b>29</b> relevant lines. 
+      <span class="green"><b>27</b> lines covered</span> and
       <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
@@ -454,277 +490,283 @@
           <code class="ruby">class LinksController &lt; ApplicationController</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  before_action :require_permission, only: [:edit]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="4">
+        <li class="covered" data-hits="9" data-linenumber="5">
           <span class="hits">9</span>
           
           <code class="ruby">    unless current_user</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
           <code class="ruby">      redirect_to &quot;/login&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">    else</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="7">
-          <span class="hits">8</span>
-          
-          <code class="ruby">      @user = current_user</code>
         </li>
       
         <li class="covered" data-hits="8" data-linenumber="8">
           <span class="hits">8</span>
           
-          <code class="ruby">      @links = @user.links.all</code>
+          <code class="ruby">      @user = current_user</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="8" data-linenumber="9">
+          <span class="hits">8</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      @links = @user.links.all</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="12">
           
-          <code class="ruby">  def create</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">    user = current_user</code>
+          <code class="ruby">  def create</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
+          <code class="ruby">    user = current_user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
           <code class="ruby">    link = user.links.new(link_params)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    if link.save</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
+          <code class="ruby">    if link.save</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
           <code class="ruby">      render partial: &#39;links/show-link&#39;, locals: {link: link}, layout: false</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">    else</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
-          
-          <code class="ruby">      flash[:notice] = &quot;Invalid URL!&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="20">
           
           
-          <code class="ruby">      render :new, status: 500</code>
+          <code class="ruby">      flash[:notice] = &quot;Invalid URL!&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="missed" data-hits="0" data-linenumber="21">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">      render :new, status: 500</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
           <code class="ruby">  def edit</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="25">
+        <li class="covered" data-hits="3" data-linenumber="26">
           <span class="hits">3</span>
           
           <code class="ruby">    @link = Link.find(params[:id])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="28">
+        <li class="covered" data-hits="1" data-linenumber="29">
           <span class="hits">1</span>
           
           <code class="ruby">  def update</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="29">
+        <li class="covered" data-hits="3" data-linenumber="30">
           <span class="hits">3</span>
           
           <code class="ruby">    @link = Link.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="30">
+        <li class="covered" data-hits="3" data-linenumber="31">
           <span class="hits">3</span>
           
           <code class="ruby">    if @link.update(link_params)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
           <code class="ruby">      flash[:success] = &quot;Link successfully updated&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="32">
+        <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
           <code class="ruby">      redirect_to links_path</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="33">
+        <li class="covered" data-hits="2" data-linenumber="34">
           <span class="hits">2</span>
           
           <code class="ruby">    elsif @link.title == &quot;&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
+        <li class="covered" data-hits="1" data-linenumber="35">
           <span class="hits">1</span>
           
           <code class="ruby">      flash[:notice] = &quot;Title cannot be blank&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="35">
+        <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
           <code class="ruby">      render :edit</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="never" data-hits="" data-linenumber="37">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="37">
+        <li class="covered" data-hits="1" data-linenumber="38">
           <span class="hits">1</span>
           
           <code class="ruby">      flash[:notice] = &quot;Please check that URL is a valid address&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="38">
+        <li class="covered" data-hits="1" data-linenumber="39">
           <span class="hits">1</span>
           
           <code class="ruby">      render :edit</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="42">
+        <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
           <code class="ruby">  private</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="44">
+        <li class="covered" data-hits="1" data-linenumber="45">
           <span class="hits">1</span>
           
           <code class="ruby">  def link_params</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="45">
+        <li class="covered" data-hits="4" data-linenumber="46">
           <span class="hits">4</span>
           
           <code class="ruby">    params.require(:link).permit(:url, :title, :user_id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="47">
+        <li class="never" data-hits="" data-linenumber="48">
           
           
           <code class="ruby">end</code>
@@ -2563,19 +2605,19 @@
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">          expect(page).to have_content &quot;Title: Google&quot;</code>
+          <code class="ruby">          expect(page).to have_content &quot;Google&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">          expect(page).to have_content &quot;URL: https://www.google.com&quot;</code>
+          <code class="ruby">          expect(page).to have_content &quot;https://www.google.com&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
-          <code class="ruby">          expect(page).to have_content &quot;Read? false&quot;</code>
+          <code class="ruby">          expect(page).to have_content &quot;false&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
@@ -2797,19 +2839,19 @@
         <li class="covered" data-hits="1" data-linenumber="30">
           <span class="hits">1</span>
           
-          <code class="ruby">          expect(page).to have_content &quot;Title: Github&quot;</code>
+          <code class="ruby">          expect(page).to have_content &quot;Github&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
-          <code class="ruby">          expect(page).to have_content &quot;URL: https://github.com&quot;</code>
+          <code class="ruby">          expect(page).to have_content &quot;https://github.com&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
-          <code class="ruby">          expect(page).to have_content &quot;Read? false&quot;</code>
+          <code class="ruby">          expect(page).to have_content &quot;false&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
@@ -3331,19 +3373,19 @@
         <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
-          <code class="ruby">          expect(page).to have_content &quot;Title: Google&quot;</code>
+          <code class="ruby">          expect(page).to have_content &quot;Google&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
-          <code class="ruby">          expect(page).to have_content &quot;URL: https://www.google.com&quot;</code>
+          <code class="ruby">          expect(page).to have_content &quot;https://www.google.com&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
-          <code class="ruby">          expect(page).to have_content &quot;Read? false&quot;</code>
+          <code class="ruby">          expect(page).to have_content &quot;false&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
@@ -3367,19 +3409,19 @@
         <li class="covered" data-hits="1" data-linenumber="30">
           <span class="hits">1</span>
           
-          <code class="ruby">          expect(page).to have_content &quot;Title: Github&quot;</code>
+          <code class="ruby">          expect(page).to have_content &quot;Github&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
-          <code class="ruby">          expect(page).to have_content &quot;URL: https://github.com&quot;</code>
+          <code class="ruby">          expect(page).to have_content &quot;https://github.com&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
-          <code class="ruby">          expect(page).to have_content &quot;Read? false&quot;</code>
+          <code class="ruby">          expect(page).to have_content &quot;false&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
@@ -3649,7 +3691,7 @@
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">        expect(page).to have_content &quot;Hot Reads!&quot;</code>
+          <code class="ruby">        expect(page).to have_content &quot;URLockbox&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">

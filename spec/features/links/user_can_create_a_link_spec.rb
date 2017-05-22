@@ -17,9 +17,9 @@ require 'rails_helper'
         click_on "Create Link"
 
         within(".link-1") do
-          expect(page).to have_content "Title: Google"
-          expect(page).to have_content "URL: https://www.google.com"
-          expect(page).to have_content "Read? false"
+          expect(page).to have_content "Google"
+          expect(page).to have_content "https://www.google.com"
+          expect(page).to have_content "false"
         end
       end
     end
