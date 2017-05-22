@@ -15,7 +15,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to '/'
     elsif User.exists?(['email LIKE ?', "%#{@user.email}%"])
-      flash[:error] = "Sorry, but that email has already been taken."
+      flash[:error] = "Email already registered with an account"
       redirect_to new_user_path
     elsif @user.password_digest == nil
       flash[:notice] = "Password cannot be blank"
