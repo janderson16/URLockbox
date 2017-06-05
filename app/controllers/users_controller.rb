@@ -10,6 +10,9 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome: #{@user.email}"
       session[:user_id] = @user.id
       redirect_to '/'
+    elsif @user.email == ""
+      flash[:notice] = "Email address cannot be blank"
+      redirect_to new_user_path
     elsif User.exists?(['email LIKE ?', "%#{@user.email}%"])
       flash[:error] = "Email already registered with an account"
       redirect_to new_user_path
