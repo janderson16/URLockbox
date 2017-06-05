@@ -15,7 +15,7 @@ require 'rails_helper'
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
         visit '/'
-        within(".link-#{link.id}") do
+        within(".link-row-#{link.id}") do
           click_on "Edit"
         end
         expect(current_path).to eq("/links/#{link.id}/edit")
@@ -26,10 +26,8 @@ require 'rails_helper'
 
         expect(current_path).to eq("/links")
 
-        within(".link-#{link.id}") do
-          expect(page).to have_content "Github"
-          expect(page).to have_content "https://github.com"
-          expect(page).to have_content "false"
+        within(".link-row-#{link.id}") do
+          expect(page).to have_content "Github https://github.com"
         end
       end
     end
@@ -48,7 +46,7 @@ require 'rails_helper'
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
         visit '/'
-        within(".link-#{link.id}") do
+        within(".link-row-#{link.id}") do
           click_on "Edit"
         end
         expect(current_path).to eq("/links/#{link.id}/edit")
@@ -76,7 +74,7 @@ require 'rails_helper'
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
         visit '/'
-        within(".link-#{link.id}") do
+        within(".link-row-#{link.id}") do
           click_on "Edit"
         end
         expect(current_path).to eq("/links/#{link.id}/edit")
