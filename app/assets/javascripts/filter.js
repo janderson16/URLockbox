@@ -11,4 +11,16 @@ $(document).ready(function () {
       }
     })
   })
+// show only read links
+  $('#show-read').on('click', function () {
+      var $rowsNo = $('#Table2 tbody tr').filter(function () {
+          return $.trim($(this).find('td').eq(2).text()) === "false"
+      }).toggle();
+  });
+  // show only unread links
+  $('#show-unread').on('click', function () {
+      var $rowsNo = $('#Table2 tbody tr').filter(function () {
+          return $.trim($(this).find('td').eq(2).text()) === "true"
+      }).toggle();
+  });
 });
