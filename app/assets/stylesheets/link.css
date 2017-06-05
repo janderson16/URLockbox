@@ -5,3 +5,7 @@
   width: 200px;
   height: 150px;
 }*/
+.stroked{
+  text-decoration: line-through;
+  background: #D3D3D3;
+}
