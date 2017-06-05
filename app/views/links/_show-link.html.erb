@@ -1,9 +1,8 @@
-<div class="link link-<%= link.id %>">
-
-  <p>Title: <%= link.title %></p>
-  <p>URL: <a href="<%= link.url %>"><%= link.url %></a></p>
-  <p>Read? <%= link.read %></p>
-  <%= button_to "Mark as Read" %>
-  <%= button_to "Edit", edit_link_path(link), method: :get %><br>
-
-</div>
+<!-- _show-link partial -->
+<tr class="link-row link-row-<%= link.id %>" data-id="<%= link.id %>">
+  <td class="link-name"><p><%= link.title%></p></td>
+  <td><p><a href="<%= link.url %>"><%= link.url %></a></p></td>
+  <td class="read-status"><p><%= link.read %></p></td>
+  <td data-id="<%= link.id %>"><button type="button" name="button" class="button mark-as-read">Mark as Read</button></td>
+  <td><%= button_to "Edit", edit_link_path(link), method: :get %></td>
+</tr>
