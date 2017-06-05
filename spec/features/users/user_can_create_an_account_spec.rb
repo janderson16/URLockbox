@@ -14,7 +14,6 @@ require 'rails_helper'
         click_on "Create User"
 
         expect(page).to have_content "Welcome: johndoe@gmail.com"
-        expect(page).to have_content "URLockbox"
         expect(current_path).to eq '/'
 
       end
