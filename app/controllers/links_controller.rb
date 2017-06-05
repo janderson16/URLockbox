@@ -5,22 +5,19 @@ class LinksController < ApplicationController
     unless current_user
       redirect_to "/login"
     else
-      @user = current_user
-      @links = @user.links.all
+      @links = current_user.links.all
     end
   end
 
-  def create
-    user = current_user
-    link = user.links.new(link_params)
-
-    if link.save
-      render partial: 'links/show-link', locals: {link: link}, layout: false
-    else
-      flash[:notice] = "Invalid URL!"
-      render :new, status: 500
-    end
-  end
+  # def create
+  #   link = current_user.links.new(link_params)
+  #   if link.save
+  #     render partial: 'links/show-link', locals: {link: link}, layout: false
+  #   else
+  #     flash[:notice] = "Invalid URL!"
+  #     render :new, status: 500
+  #   end
+  # end
 
   def edit
     @link = Link.find(params[:id])
