@@ -22,10 +22,10 @@ describe Link do
                              url: "https://wwww.google.com"
                              )
 
-    expect(user).to_not be_valid
+    expect(link).to_not be_valid
   end
 
-  it "user cannot be created without valid URL" do
+  it "link cannot be created without valid URL" do
     user = User.create(email: "dirk_diggler@boogie.com",
                        password: "boom",
                        password_confirmation: "boom"
@@ -34,6 +34,19 @@ describe Link do
                              url: "google.com"
                              )
 
-    expect(user).to_not be_valid
+    expect(link).to_not be_valid
+  end
+
+  it "link can be edited" do
+    user = User.create(email: "dirk_diggler@boogie.com",
+                       password: "boom",
+                       password_confirmation: "boom"
+                       )
+    link = user.links.create(title: "Google",
+                             url: "https://wwww.google.com"
+                             )
+    link.update(title: "Github", url: "https://github.com/")
+
+    expect(link).to be_valid
   end
 end
