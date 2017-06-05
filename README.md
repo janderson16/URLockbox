@@ -28,6 +28,6 @@ The URLockbox is an app for tracking your favorite links. Users must create an a
 ```$ rspec```
 * SimpleCov coverage
 ```$ open coverage/index.html```
-* 23 examples, 0 failures (96.45% coverage)
+* 27 examples, 0 failures (98.62% coverage)
 
 ---
