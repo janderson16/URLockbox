@@ -7,10 +7,10 @@ The URLockbox is an app for tracking your favorite links. Users must create an a
 [Production link](https://obscure-basin-69091.herokuapp.com/)
 
 #### The Nitty Gritty
--Ruby 2.3.0
--Rails 5.0.0.1
--RSpec test suite w/ Selenium & Capybara
--BCrpyt
+* Ruby 2.3.0
+* Rails 5.0.0.1
+* RSpec test suite w/ Selenium & Capybara
+* BCrpyt
 
 
 ## Setup
@@ -24,10 +24,10 @@ The URLockbox is an app for tracking your favorite links. Users must create an a
 ```$ rails s```
 
 #### Run Test Suite
-Must have Firefox 46  [here](https://www.softexia.com/windows/web-browsers/firefox-46) in order to run Selenium webdriver (JavaScript tests)
+* Must have Firefox 46  [here](https://www.softexia.com/windows/web-browsers/firefox-46) in order to run Selenium webdriver (JavaScript tests)
 ```$ rspec```
-SimpleCov coverage
+* SimpleCov coverage
 ```$ open coverage/index.html```
-23 examples, 0 failures (96.45% coverage)
+* 23 examples, 0 failures (96.45% coverage)
 
 ---
