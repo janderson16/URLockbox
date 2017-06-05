@@ -20,9 +20,10 @@ The URLockbox is an app for tracking your favorite links. Users must create an a
 1. Bundle
 ```$ bundle install```
 #### Run Locally
-
+1. Start server
 ```$ rails s```
-
+1. visit localhost in broswer
+```localhost:3000``` 
 #### Run Test Suite
 * Must have Firefox 46  [here](https://www.softexia.com/windows/web-browsers/firefox-46) in order to run Selenium webdriver (JavaScript tests)
 ```$ rspec```
