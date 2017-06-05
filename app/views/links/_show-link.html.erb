@@ -4,9 +4,9 @@
   <td><p><a href="<%= link.url %>"><%= link.url %></a></p></td>
   <td class="read-status"><p><%= link.read %></p></td>
   <% if link.read == false %>
-  <td data-id="<%= link.id %>"><button type="button" name="button" class="button mark-as-read">Mark as Read</button></td>
+  <td data-id="<%= link.id %>" data-url="<%= link.url %>"><button type="button" name="button" class="button mark-as-read">Mark as Read</button></td>
   <% else link.read == true %>
-  <td data-id="<%= link.id %>"><button type="button" name="button" class="button mark-as-unread">Mark as Unread</button></td>
+  <td data-id="<%= link.id %>" data-url="<%= link.url %>"><button type="button" name="button" class="button mark-as-unread">Mark as Unread</button></td>
   <% end %>
   <td><%= button_to "Edit", edit_link_path(link), method: :get %></td>
 </tr>
