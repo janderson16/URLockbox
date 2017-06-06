@@ -32,7 +32,7 @@ This app also works in conjunction with [HotReads](https://peaceful-anchorage-24
 ```$ rails s```
 1. visit localhost in broswer
 ```localhost:3000``` 
-2. **if trying to with HotReads (both locally)  - in ```read.js``` it's important to comment out line 22 and un-comment line 21 to change the AJAX call destination**
+2. **if trying to serve with HotReads (both locally)  - in ```read.js``` it's important to comment out line 22 and un-comment line 21 to change the AJAX call destination**
 #### Run Test Suite
 * Must have Firefox 46  [here](https://www.softexia.com/windows/web-browsers/firefox-46) in order to run Selenium webdriver (JavaScript tests)
 ```$ rspec```
