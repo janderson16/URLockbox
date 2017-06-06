@@ -6,6 +6,8 @@ The URLockbox is an app for tracking your favorite links. Users must create an a
 
 [Production link](https://obscure-basin-69091.herokuapp.com/)
 
+This app also works in conjunction with [HotReads](https://peaceful-anchorage-24168.herokuapp.com/) to track the most read links.
+
 #### The Nitty Gritty
 * Ruby 2.3.0
 * Rails 5.0.0.1
@@ -19,11 +21,18 @@ The URLockbox is an app for tracking your favorite links. Users must create an a
 ```$ git clone git@github.com:janderson16/m4-final.git```
 1. Bundle
 ```$ bundle install```
+1. Create database
+```$ rake db:create```
+1. Migrate
+```$ rake db:migrate``` 
+1. Seed
+```$ rake db:seed```
 #### Run Locally
 1. Start server
 ```$ rails s```
 1. visit localhost in broswer
 ```localhost:3000``` 
+**if trying to with HotReads (both locally)  - in ```read.js``` it's important to comment out line 22 and un-comment line 21 to change the AJAX call destination**
 #### Run Test Suite
 * Must have Firefox 46  [here](https://www.softexia.com/windows/web-browsers/firefox-46) in order to run Selenium webdriver (JavaScript tests)
 ```$ rspec```
