@@ -18,9 +18,8 @@ function markAsRead(e) {
 
   $.ajax({
     method: "POST",
-    // url: "http://localhost:1080/api/v1/links",
-    url: "http://localhost:1080/links",
-    // url: `https://afternoon-woodland-85030.herokuapp.com/`,
+    // url: "http://localhost:1080/links",
+    url: `https://peaceful-anchorage-24168.herokuapp.com/links`,
     data: {"link": {url: `${linkUrl}`}}
   });
 }
