@@ -1,5 +1,5 @@
 <!-- _show-link partial -->
-<tr class="link-row link-row-<%= link.id %> <%= 'stroked' if link.read == true %>" data-id="<%= link.id %>">
+<tr class="link-row link-row-<%= link.id %> <%= 'stroked' if link.read == true %>" data-id="<%= link.id %>" data-url="<%= link.url %>">
   <td class="link-name"><p><%= link.title%></p></td>
   <td><p><a href="<%= link.url %>"><%= link.url %></a></p></td>
   <td class="read-status"><p><%= link.read %></p></td>

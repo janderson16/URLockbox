@@ -8,13 +8,23 @@ function markAsRead(e) {
   e.preventDefault()
 
   var linkId = $(this).parent().data("id")
+  var linkUrl = $(this).parents("tr").data("url")
 
   $.ajax({
     method: "PUT",
     url: `/api/v1/links/${linkId}`,
     data: {"link": {read: "true"}}
   }).then(updateLinkToReadStatus)
+
+  $.ajax({
+    method: "POST",
+    // url: "http://localhost:1080/api/v1/links",
+    url: "http://localhost:1080/links",
+    // url: `https://afternoon-woodland-85030.herokuapp.com/`,
+    data: {"link": {url: `${linkUrl}`}}
+  });
 }
+
 
 function updateLinkToReadStatus(link) {
   $(`tr[data-id=${link.id}]`).toggleClass("stroked").find(".read-status").text(link.read);
