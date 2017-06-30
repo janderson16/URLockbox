@@ -18,7 +18,7 @@ This app also works in conjunction with [HotReads](https://peaceful-anchorage-24
 ## Setup
 
 1. Clone down the repository
-```$ git clone git@github.com:janderson16/URLockbox.git```
+```$ git clone git@github.com:janderson16/m4-final.git```
 1. Bundle
 ```$ bundle install```
 1. Create database
