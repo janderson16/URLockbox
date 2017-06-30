@@ -35,7 +35,8 @@ This app also works in conjunction with [HotReads](https://peaceful-anchorage-24
 2. **if trying to serve with HotReads (both locally)  - in ```read.js``` it's important to comment out line 22 and un-comment line 21 to change the AJAX call destination**
 #### Run Test Suite
 * Must have Firefox 46  [here](https://www.softexia.com/windows/web-browsers/firefox-46) in order to run Selenium webdriver (JavaScript tests)
-```$ rspec```
+1. ```rake db:test:prepare```
+1. ```$ rspec```
 * SimpleCov coverage
 ```$ open coverage/index.html```
 * 27 examples, 0 failures (98.62% coverage)
