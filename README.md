@@ -2,7 +2,7 @@
 
 ## About the app
 
-The URLockbox is an app for tracking your favorite links. Users must create an account using their email address and a password in order to keep track of their links. Once signed in, users must enter a valid URL (https://www.google.com rather than google.com) and a user-chosen title (cannot be blank) to save. Links have an 'unread' status by default but can be changed using the 'Mark as Read/Mark as Unread' buttons. Users can filter their links in one of two ways. The first is to enter text into the filter box, as a user types, their results list will shorten with each key typed. The second is to click on the "Only Read Links" or "Only Unread Links" buttons which limit results to the read status of each link.
+The URLockbox is an app for tracking your favorite links. Users must create an account using their email address and a password in order to keep track of their links. Once signed in, users must enter a valid URL (https://www.google.com rather than google.com) and a user-chosen title (cannot be blank) to save. Links have an 'unread' status by default but can be changed using the 'Mark as Read/Mark as Unread' buttons. Users can filter their links in one of two ways. The first is to enter text into the filter box, as a user types, their results list will shorten with each key typed. The second is to click on the "Only Read Links" or "Only Unread Links" buttons which limit results to the read status of each link. It makes use of the BCrypt gem for authentication and authorization as well as the validate_url gem to ensure the validity of web addresses. 
 
 [Production link](https://obscure-basin-69091.herokuapp.com/)
 
